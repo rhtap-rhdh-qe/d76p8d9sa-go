@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: d76p8d9sa-go-gitops
+  description: This is GitOps manifest for d76p8d9sa-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=d76p8d9sa-go
+    backstage.io/kubernetes-id: d76p8d9sa-go 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhtap-rhdh-qe/d76p8d9sa-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:d76p8d9sa-go
